@@ -6,7 +6,7 @@
 
 ### 3. OS X 10.11 Xcode 7.x 请参考：[objc - 编译Runtime源码objc4-680][objc4-680]
 
-Runtime源码objc4-723编译环境：[macOS 11.13][maxOS] [Xcode 9.3][Xcode]
+Runtime源码objc4-723编译环境：[macOS 11.13][macOS]、[Xcode 9.3][Xcode]
 需要用到的源码：
 > * dyld-519.2.1
 > * launchd-842.1.4
@@ -18,7 +18,7 @@ Runtime源码objc4-723编译环境：[macOS 11.13][maxOS] [Xcode 9.3][Xcode]
 > * xnu-4570.1.46
 > * objc4-723
 
-遇到问题可以参考 [objc4-680][objc4-680] 和 [objc4- 706][objc4- 706] 的解决方案。
+遇到问题可以参考 [objc4-680][objc4-680] 和 [objc4- 706][objc4-706] 的解决方案。
 
 补充：
 #### 1. `Use of undeclared identifier ‘DYLD_MACOSX_VERSION_10_11`
@@ -29,7 +29,7 @@ Runtime源码objc4-723编译环境：[macOS 11.13][maxOS] [Xcode 9.3][Xcode]
 `#define DYLD_MACOSX_VERSION_10_12        0x000A0C00`
 `#define DYLD_MACOSX_VERSION_10_13        0x000A0D00`
 
-#### 2. 'objc-runtime-oldobjc-shared-cache.h.h' file not found
+#### 2. `'objc-runtime-oldobjc-shared-cache.h.h' file not found`
 这个问题，貌似是苹果官方文档写的问题，引入错误，这里，可以参考旧版本的写法：
 注释掉 `// include "objc-runtime-oldobjc-shared-cache.h.h"`
 引入 `objc-runtime-old.h`
